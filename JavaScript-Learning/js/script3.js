@@ -7,11 +7,7 @@ function task5(){
 
 
 function task5_1(){
-    let admin;
-    let name;
-    name = 'Джон'
-    admin=name;
-    alert(`1. hello undefined
+    alert(`1. hello 1
 2. hello name
 3. hello Ilya`);
 };
