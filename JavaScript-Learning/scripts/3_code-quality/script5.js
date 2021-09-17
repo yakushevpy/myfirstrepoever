@@ -5,7 +5,7 @@ function task3_5(){
     task3_5_1();
 };
 
-function task3_2_1() {
+function task3_5_1() {
     alert(`
 describe('pow', function()) {
 
