@@ -15,7 +15,15 @@
     <script src="scripts/2_first-steps/script13.js"></script> 
     <script src="scripts/2_first-steps/script14.js"></script>
     <script src="scripts/2_first-steps/script15.js"></script>
-    <script src="scripts/2_first-steps/script17.js"></script>     
+    <script src="scripts/2_first-steps/script17.js"></script>
+    <script src="scripts/3_code-quality/script1.js"></script>
+    <script>
+        function start(x,y,z) {
+            let tasknumber = (x + '_' + y +'_'+ z);
+            let taskfullname = 'task'+ tasknumber;
+            eval(taskfullname)();
+        }
+    </script>     
 </head>
 <body>
     <!-- <script>
@@ -69,6 +77,18 @@
                 <br><input type="button" style="height:25px; width:300px; text-align:left" value="4. Ниндзя-код" disabled>
                 <br><input type="button" style="height:25px; width:300px; text-align:left" value="5. Автоматическое тестирование c использованием фреймворка Mocha" disabled>
                 <br><input type="button" style="height:25px; width:300px; text-align:left" value="6. Полифилы" disabled>
+            </td>
+        </tr>
+        <tr align = center>
+            <td colspan="3">
+                <!--<form name="task">
+                <p>Введите номер практического задания:</p>
+                <input type = "text" style= "height: 15px; width: 15px; text-align: center;" max="3" maxlength="1" name="first" value =""> /
+                <input type = "text" style= "height: 15px; width: 25px; text-align: center;" max="20" maxlength="2" name="second" value =""> /
+                <input type = "text" style= "height: 15px; width: 15px; text-align: center;" max="20" maxlength="1" name="third" value =""> <br>
+                <font size = 2>(номер раздела / номер урока / номер упражнения в уроке)</font> <br>
+                <input type="button" style="height:25px; width:105px; text-align:center" value="Запустить" onclick="start(first.value,second.value,third.value)">
+                </form>-->
             </td>
         </tr>
     </table>
