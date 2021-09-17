@@ -1,4 +1,4 @@
-function task10(){
+function task2_10(){
     task1desc = `   if (строка с нулём)
 Выведется ли alert?`;
     task2desc = `   Название JavaScript
@@ -17,17 +17,17 @@ function task10(){
 Перепишите if..else с использованием нескольких операторов '?'.
 Для читаемости рекомендуется разбить код на несколько строк.`
     confirm(`Задание:\n${task1desc}\n`);
-    task10_1();
+    task2_10_1();
 };
 
 
-function task10_1(){
+function task2_10_1(){
     alert(`Выведется`);
     confirm(`Задание:\n${task2desc}\n`);
-    task10_2();
+    task2_10_2();
 };
 
-function task10_2(){
+function task2_10_2(){
     let askNameOfJava = prompt(`Какое «официальное» название JavaScript?`, '')
     if (askNameOfJava == 'ECMAScript') {
         alert(`Верно!`)
@@ -35,10 +35,10 @@ function task10_2(){
         alert(`Не знаете? ECMAScript!`)
     };
     confirm(`Задание:\n${task3desc}\n`);
-    task10_3();
+    task2_10_3();
 }
 
-function task10_3(){
+function task2_10_3(){
     let number = prompt('Введите любое целое число', -5);
     if (number == 0){
         alert('0')
@@ -48,16 +48,16 @@ function task10_3(){
         alert('-1')
     };
     confirm(`Задание:\n${task4desc}\n`);
-    task10_4();
+    task2_10_4();
 }
 
-function task10_4(){
+function task2_10_4(){
     alert(`let result = (a + b < 4) ? 'Мало': 'Много'`)
     confirm(`Задание:\n${task5desc}\n`);
-    task10_5();
+    task2_10_5();
 }
 
-function task10_5(){
+function task2_10_5(){
     alert(`let message = (login == 'Сотрудник') ? 'Привет': 
 (login == 'Директор') ? 'Здравствуйте': 
 (login == '') ? 'Нет логина': 

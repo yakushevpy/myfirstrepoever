@@ -1,12 +1,12 @@
-function task14(){
+function task2_14(){
     task1desc = `   Напишите "if", аналогичный "switch"`;
     task2desc = `   Переписать условия "if" на "switch"`
     confirm(`Задание:\n${task1desc}\n`);
-    task14_1();
+    task2_14_1();
 };
 
 
-function task14_1(){
+function task2_14_1(){
     let browser = prompt('Введите название браузера', 'Firefox')
     if(browser === 'Edge'){
         alert( "You've got the Edge!" ); 
@@ -31,11 +31,11 @@ if(browser === 'Edge'){
     alert( 'We hope that this page looks ok!' );
 }`);
     confirm(`Задание:\n${task2desc}\n`);
-    task14_2();
+    task2_14_2();
 };
 
 
-function task14_2(){
+function task2_14_2(){
     const number = +prompt('Введите число между - и 3', '0');
     switch(number) {
         case 0: 

@@ -1,4 +1,4 @@
-function task13(){
+function task2_13(){
     task1desc = `   Последнее значение цикла
 Какое последнее значение выведет этот код? Почему?
 let i = 3;
@@ -19,31 +19,31 @@ while (i) {
     task6desc = `   Повторять цикл, пока ввод неверен`
     task7desc = `   Вывести простые числа`
     confirm(`Задание:\n${task1desc}\n`);
-    task13_1();
+    task2_13_1();
 };
 
 
-function task13_1(){
+function task2_13_1(){
     alert(`Единицку - 1`);
     confirm(`Задание:\n${task2desc}\n`);
-    task13_2();
+    task2_13_2();
 };
 
-function task13_2(){
+function task2_13_2(){
     alert(`первый варик - 1,2,3,4
 второй варик - 1,2,3,4,5`);
     confirm(`Задание:\n${task3desc}\n`);
-    task13_3();
+    task2_13_3();
 };
 
-function task13_3(){
+function task2_13_3(){
     alert(`первый - 0,1,2,3,
 второй - 1,2,3,4,`);
     confirm(`Задание:\n${task4desc}\n`);
-    task13_4();
+    task2_13_4();
 };
 
-function task13_4(){
+function task2_13_4(){
     for(let i =2; i <= 10; ++i ) {
         if(i % 2 == 0) {
             alert(i);
@@ -51,26 +51,26 @@ function task13_4(){
         };
     };
     confirm(`Задание:\n${task5desc}\n`);
-    task13_5();
+    task2_13_5();
 };
 
-function task13_5() {
+function task2_13_5() {
     let i = 0;
     while(i++ < 3) alert (`Number ${i}`);
     confirm(`Задание:\n${task6desc}\n`);
-    task13_6();
+    task2_13_6();
 };
 
-function task13_6() {
+function task2_13_6() {
     let n;
     do {
         n = prompt(`Введите число > 100`, `101`)
     } while (+n <= 100);
     confirm(`Задание:\n${task7desc}\n`);
-    task13_7();
+    task2_13_7();
 };
 
-function task13_7() {
+function task2_13_7() {
     let n = prompt(`Введите верхнюю границу`, `100`);
     
     let message = `Простые числа - `;

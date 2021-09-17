@@ -1,4 +1,4 @@
-function task8(){
+function task2_8(){
     task1desc = `   Постфиксная и префиксная формы
 Чему будут равны переменные a, b, c и d в примере ниже?`;
     task2desc = `   Результат присваивания
@@ -10,23 +10,23 @@ function task8(){
 Он работает неправильно. Код в примере выводит 12 (для значения полей по умолчанию).
 В чём ошибка? Исправьте её. Результат должен быть 3.`
     confirm(`Задание:\n${task1desc}\n`);
-    task8_1();
+    task2_8_1();
 };
 
 
-function task8_1(){
+function task2_8_1(){
     alert(`a = 2\nb = 2\nc = 2\nd=1`);
     confirm(`Задание:\n${task2desc}\n`);
-    task8_2();
+    task2_8_2();
 };
 
-function task8_2() {
+function task2_8_2() {
     alert(`a = 4\nx = 5`)
     confirm(`Задание:\n${task3desc}\n`);
-    task8_3();
+    task2_8_3();
 }
 
-function task8_3(){
+function task2_8_3(){
     alert(`10
 -1
 1
@@ -43,10 +43,10 @@ NaN
 NaN
 -2`);
     confirm(`Задание:\n${task4desc}\n`);
-    task8_4();
+    task2_8_4();
 }
 
-function task8_4() {
+function task2_8_4() {
     let a = prompt(`Первое число?`, 1);
     let b = prompt(`Второе число?`, 2);
     alert(+a + +b)
