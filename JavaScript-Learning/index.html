@@ -2,6 +2,15 @@
 
 <html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <style type="text/css">
+        body { 
+         background-image: url(scripts/pics/wall.jpg); /* Путь к фоновому рисунку */
+         background-size: 100%;
+        
+         /*background-position: ; /* Положение фона */
+         /*background-repeat: ; /* Повторяем фон по горизонтали */ 
+        }
+       </style>
     <meta charset="utf-8" />
     <title>JS Learning</title>
     <script src="scripts/2_first-steps/script1.js"></script>
@@ -31,9 +40,12 @@
     <!-- <script>
         alert('Привет!');
     </script> -->
-    <div align="center"><h2>JavaScript Learning</h2><hr /></div>
 
-    <table align='center', border=1>
+
+    <table align='center', border=1 style="background-color: snow;">
+        <tr>
+            <td colspan="4" align="center"><h2>JavaScript Learning</h2></td>
+        </tr>
         <tr align="middle">
             <td><h4><a href = 'https://learn.javascript.ru/getting-started'>Введение</a></h4></td>
             <td><h4><a href = 'https://learn.javascript.ru/first-steps'>Основы JavaScript</a></h4></h4></td>
@@ -98,6 +110,12 @@
             </td>
         </tr> -->
     </table>
+    <marquee behavior="alternate" direction="right">
+        <picture>
+            <source srcset="scripts/pics/nya.gif" media="size: 5%">
+            <img src="scripts/pics/nya.gif" alt="nya">
+           </picture>
+    </marquee>
 
 
 
