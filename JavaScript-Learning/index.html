@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <style type="text/css">
+        body { 
+         background-image: url(scripts/pics/wall.jpg); /* Путь к фоновому рисунку */
+         background-size: 100%;
+        
+         /*background-position: ; /* Положение фона */
+         /*background-repeat: ; /* Повторяем фон по горизонтали */ 
+        }
+       </style>
+    <meta charset="utf-8" />
+    <title>JS Learning</title>
+    <script src="scripts/2_first-steps/script1.js"></script>
+    <script src="scripts/2_first-steps/script4.js"></script>
+    <script src="scripts/2_first-steps/script5.js"></script> 
+    <script src="scripts/2_first-steps/script6.js"></script>
+    <script src="scripts/2_first-steps/script8.js"></script>
+    <script src="scripts/2_first-steps/script9.js"></script>
+    <script src="scripts/2_first-steps/script10.js"></script>
+    <script src="scripts/2_first-steps/script11.js"></script> 
+    <script src="scripts/2_first-steps/script13.js"></script> 
+    <script src="scripts/2_first-steps/script14.js"></script>
+    <script src="scripts/2_first-steps/script15.js"></script>
+    <script src="scripts/2_first-steps/script17.js"></script>
+    <script src="scripts/3_code-quality/script2.js"></script>
+    <script src="scripts/3_code-quality/script5.js"></script>
+    <script src="scripts/4_object-basics/script1.js"></script>
+    <script>
+        function start(x,y,z) {
+            let tasknumber = (x + '_' + y +'_'+ z);
+            let taskfullname = 'task'+ tasknumber;
+            eval(taskfullname)();
+        }
+    </script>     
+</head>
+<body>
+    <!-- <script>
+        alert('Привет!');
+    </script> -->
+
+
+    <table align='center', border=1 style="background-color: snow;">
+        <tr>
+            <td colspan="4" align="center"><h2>JavaScript Learning</h2></td>
+        </tr>
+        <tr align="middle">
+            <td><h4><a href = 'https://learn.javascript.ru/getting-started'>Введение</a></h4></td>
+            <td><h4><a href = 'https://learn.javascript.ru/first-steps'>Основы JavaScript</a></h4></h4></td>
+            <td><h4><a href = 'https://learn.javascript.ru/code-quality'>Качество кода</a></h4></td>
+            <td><h4><a href = 'https://learn.javascript.ru/object-basics'>Объекты: основы</a></h4></td>
+        </tr>
+        <tr>
+            <td valign = top>
+                <input type="button" style="height:25px; width:300px; text-align:left" value="1. Введение в JavaScript" disabled>
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="2. Справочники и спецификации" disabled>
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="3. Редакторы кода" disabled>
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="4. Консоль разработчика" disabled>
+            </td>
+            <td valign = top>
+                <input type="button" style="height:25px; width:300px; text-align:left" value="1. Привет, мир!" onclick="task2_1('script1.js')">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="2. Структура кода" disabled>
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="3. Строгий режим" disabled>
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="4. Переменные" onclick="task2_4()">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="5. Типы данных" onclick="task2_5()">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="6. Взаимодействие" onclick="task2_6()">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="7. Преобразование типов" disabled>
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="8. Базовые операторы, математика" onclick="task2_8()">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="9. Операторы сравнения" onclick="task2_9()">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="10. Условное ветвление" onclick="task2_10()">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="11. Логические операторы" onclick="task2_11()">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="     а. Логин" onclick="task2_11_0()">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="12. Оператор объединения с null '??'" disabled>
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="13. Циклы while и for" onclick="task2_13()">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="     а. Простые" onclick="task2_13_7()">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="14. Конструкция 'switch'" onclick="task2_14()">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="     а. Switch > If" onclick="task2_14_1()">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="     b. If > Switch" onclick="task2_14_2()">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="15. Функции" onclick="task2_15()">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="     a. Функция min(a,b)" onclick="task2_15_3()">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="     b. Функция pow(x.n)" onclick="task2_15_4()">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="16. Function Expression" disabled>
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="17. Функции-стрелки, основы" onclick="task2_16()">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="18. Особенности JavaScript" disabled>
+            </td>
+            <td valign = top>
+                <input type="button" style="height:25px; width:300px; text-align:left" value="1. Отладка в браузере Chrome" disabled>
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="2. Советы по стилю кода" onclick ="task3_2()">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="3. Комментарии" disabled>
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="4. Ниндзя-код" disabled>
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="5. Автоматическое тестирование c использованием фреймворка Mocha" onclick="task3_5()">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="6. Полифилы" disabled>
+            </td>
+            <td valign = top>
+                <input type = "button" style= "height:25px; width: 300px; text-align: left;" value="1. Объекты" onclick = "task4_1()">
+            </td>
+        </tr>
+        <!-- <tr align = center>
+            <td colspan="4">
+                <form name="task">
+                <p>Введите номер практического задания:</p>
+                <input type = "text" style= "height: 15px; width: 15px; text-align: center;" max="3" maxlength="1" name="first" value =""> /
+                <input type = "text" style= "height: 15px; width: 25px; text-align: center;" max="20" maxlength="2" name="second" value =""> /
+                <input type = "text" style= "height: 15px; width: 15px; text-align: center;" max="20" maxlength="1" name="third" value =""> <br>
+                <font size = 2>(номер раздела / номер урока / номер упражнения в уроке)</font> <br>
+                <input type="button" style="height:25px; width:105px; text-align:center" value="Запустить" onclick="start(first.value,second.value,third.value)">
+                </form>
+            </td>
+        </tr> -->
+    </table>
+    <!-- <marquee behavior="alternate" direction="right">
+        <picture>
+            <source srcset="scripts/pics/nya.gif" media="size: 5%">
+            <img src="scripts/pics/nya.gif" alt="nya">
+           </picture>
+    </marquee> -->
+
+
+
+
+
+</body>
+    </html>
