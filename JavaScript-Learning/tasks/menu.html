@@ -1,0 +1,55 @@
+<script>
+    let task_url = `tasks/content1.html`
+    function get_task(id) {
+        frame = document.getElementById('content_frame');
+        frame.src = id + '.html';
+    };
+</script>
+
+<table width="1500px">
+    <tr>
+        <td width="320px" valign="top">
+            <details>
+	            <summary>Введение</summary>
+	            <input type = "button" style= "height:25px; width: 300px; text-align: center;" value="нет уроков" disabled>
+            </details>
+            <details>
+	            <summary>Основы JavaScript</summary>
+	            <input type="button" style="height:25px; width:300px; text-align:left" value="1. Привет, мир!" onclick="get_task('2_first_steps/task1')">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="2. Структура кода" disabled>
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="3. Строгий режим" disabled>
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="4. Переменные" onclick="get_task('2_first_steps/task4')">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="5. Типы данных" onclick="get_task('2_first_steps/task5')">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="6. Взаимодействие" onclick="get_task('2_first_steps/task6')">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="7. Преобразование типов" disabled>
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="8. Базовые операторы, математика" onclick="get_task('2_first_steps/task8')">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="9. Операторы сравнения" onclick="get_task('2_first_steps/task9')">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="10. Условное ветвление" onclick="get_task('2_first_steps/task10')">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="11. Логические операторы" onclick="get_task('2_first_steps/task11')">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="12. Оператор объединения с null '??'" disabled>
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="13. Циклы while и for" onclick="get_task('2_first_steps/task13')">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="14. Конструкция 'switch'" onclick="get_task('2_first_steps/task14')">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="15. Функции" onclick="get_task('2_first_steps/task15')">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="16. Function Expression" disabled>
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="17. Функции-стрелки, основы" onclick="get_task('2_first_steps/task17')">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="18. Особенности JavaScript" disabled>
+            </details>
+            <details>
+	            <summary>Качество кода</summary>
+	            <input type="button" style="height:25px; width:300px; text-align:left" value="1. Отладка в браузере Chrome" disabled>
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="2. Советы по стилю кода" onclick ="task3_2()">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="3. Комментарии" disabled>
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="4. Ниндзя-код" disabled>
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="5. Автоматическое тестирование c использованием фреймворка Mocha" onclick="task3_5()">
+                <br><input type="button" style="height:25px; width:300px; text-align:left" value="6. Полифилы" disabled>
+            </details>
+            <details>
+        	    <summary>Объекты: основы</summary>
+        	    <input type = "button" style= "height:25px; width: 300px; text-align: left;" value="1. Объекты" onclick = "get_task(1)">
+            </details>
+        </td>
+        <td width="1180px" border=1>
+            <iframe id='content_frame' src='intro.html' width="1180px" height="750px" frameborder="0" scrolling="no">Content</iframe>
+        </td>
+    </tr>
+</table>
