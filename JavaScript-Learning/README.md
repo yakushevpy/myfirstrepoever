@@ -1,5 +1,5 @@
 # Java Script learning
 
- * https://learn.javascript.ru/
+https://learn.javascript.ru/
 
 
