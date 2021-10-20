@@ -16,4 +16,14 @@ describe('Вычитание x - y', function(){
     });
 });
 
+describe('Rick and Morty', function(){
+    it('Проверить, что id = 5 соответствует персонаж по имени Jerry Smith', async function(){
+        let name = await fetching_name(5);
+        assert.equal(name, 'Jerry Smith');
+    });
+    it('Проверить, что id = 5 соответствует персонаж мужского пола', async function(){
+        let gender = await fetching_gender(5);
+        assert.equal(gender, 'Male');
+    });
+});
 
