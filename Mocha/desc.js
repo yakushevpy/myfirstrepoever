@@ -17,7 +17,7 @@ describe('Вычитание x - y', function(){
 });
 
 describe('Rick and Morty', function(){
-    it('Проверить, что id = 5 соответствует персонаж по имени Jerry Smith', async function(){
+    it('Проверить, что id = 5 соответствует персонаж по имени Jerry Smith',  async function(){
         let name = await fetching_name(5);
         assert.equal(name, 'Jerry Smith');
     });
@@ -26,4 +26,11 @@ describe('Rick and Morty', function(){
         assert.equal(gender, 'Male');
     });
 });
+
+describe('Фетчинг POST запроса', function(){
+    it('Проверить создание продукта для клиента', async function(){
+        let answer = await product_creating(1631959);
+        expect(answer).to.have.status(200);
+    })
+})
 
