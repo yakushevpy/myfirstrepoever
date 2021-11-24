@@ -75,8 +75,5 @@ function trancate(str, maxlength) {
 };
 
 function extractCurrencyValue(amount) {
-    a = amount.trim();
-    lenA = a.length;
-    a = a.substring(1, lenA);
-    return a;    
-}
+    return amount.slice(1);    
+};
