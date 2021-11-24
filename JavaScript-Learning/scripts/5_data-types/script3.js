@@ -40,6 +40,8 @@ function confirming(n) {
                 confirming(4);
                 break;
             case 4: ;
+                amount = prompt('Введите стоимость в виде "$111"', '$12345')
+                alert(extractCurrencyValue(amount));
                 break;
         };
     } else {
@@ -70,4 +72,11 @@ function trancate(str, maxlength) {
     } else {
         return str; 
     };
+};
+
+function extractCurrencyValue(amount) {
+    a = amount.trim();
+    lenA = a.length;
+    a = a.substring(1, lenA);
+    return a;    
 }
