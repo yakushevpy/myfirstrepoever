@@ -40,7 +40,11 @@ function confirming(n) {
                 confirming(5);
                 break;
             case 5:
-                
+                alert( getMaxSubSum([-1, 2, 3, -9]) ); 
+                alert( getMaxSubSum([-1, 2, 3, -9, 11]) ); 
+                alert( getMaxSubSum([-2, -1, 1, 2]) );
+                alert( getMaxSubSum([1, 2, 3]) );
+                alert( getMaxSubSum([100, -9, 2, -3, 5]) );
                 break;
         };
     } else {
@@ -50,13 +54,30 @@ function confirming(n) {
 
 
 
-function sumInput(){
+function sumInput() {
     let n = +prompt('Введите число!\n(Чтобы завершить ввод, введите не числовое значение)');
     let answer = [];
-    while (Number.isInteger(n)) {
+    while (Number.isInteger(n) && Number.isFinite(n) && Number.isSafeInteger(n)) {
         answer.push(n);
         n = +prompt('Введите число!\n(Чтобы завершить ввод, введите не числовое значение)');
     };
     alert(answer);
-}; // добавить сумму
+    let sum = 0;
+    for (let item of answer) {
+        sum += item; 
+    };
+    alert(sum);
+};
 
+function getMaxSubSum(arr) {
+    let sum = 0;
+    let sumItem = 0;
+    for (let item of arr) {
+        sumItem += item;
+        sum = Math.max(sum, sumItem);
+        if (sumItem < 0) {
+            sumItem = 0;
+        }
+    }
+    return sum;
+}
