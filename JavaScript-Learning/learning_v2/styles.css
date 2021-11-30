@@ -1,0 +1,45 @@
+.button {
+    height: 25px ; 
+    width: 270px ; 
+    text-align: left;
+}
+
+.container {
+    min-width: 1200px;
+}
+
+table {
+    table-layout: auto;
+    border-collapse: collapse;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(0, 0, 0);
+}
+
+details > summary {
+    list-style: none;
+}
+details > summary::-webkit-details-marker {
+    display: none;
+}
+details summary:before {
+    content: '+';
+    font-family: "Font Awesome 5 free";
+    font-size: 20;
+    margin-right: 10px;        
+}
+details[open] summary:before {
+    content: '-';
+    font-family: "Font Awesome 5 free";
+    font-size: 40;
+    margin-right: 10px;    
+}
+summary{
+    text-align: left;    
+}
+
+h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+}
+h3 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
