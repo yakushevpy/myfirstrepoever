@@ -8,6 +8,10 @@ input:hover {
     background-color: seagreen;
 }
 
+input:disabled:hover {
+    background-color: grey;
+}
+
 :disabled {
     background-color: whitesmoke;
 }

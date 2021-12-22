@@ -35,21 +35,11 @@
     <script src="scripts/5_data-types/script3.js"></script>
     <script src="scripts/5_data-types/script4.js"></script>
     <script src="scripts/5_data-types/script5.js"></script>
-    <script>
-        function start(x,y,z) {
-            let tasknumber = (x + '_' + y +'_'+ z);
-            let taskfullname = 'task'+ tasknumber;
-            eval(taskfullname)();
-        }
-    </script>  
+    <script src="scripts/5_data-types/script7.js"></script>
+ 
     <link rel="stylesheet" href="styles.css">   
 </head>
 <body>
-    <!-- <script>
-        alert('Привет!');
-    </script> -->
-
-
     <table align='center', border=1>
         <tr>
             <td colspan="5" align="center"><h2>JavaScript Learning</h2></td>
@@ -119,7 +109,7 @@
                 <br><input type = "button" value="4. Массивы" onclick = "task5_4()">
                 <br><input type = "button" value="5. Методы массивов" onclick="task5_5()">
                 <br><input type = "button" value="6. Перебираемые объекты" disabled>
-                <br><input type = "button" value="7. Map и Set" disabled>
+                <br><input type = "button" value="7. Map и Set" onclick="task5_7()">
                 <br><input type = "button" value="8. WeakMap и WeakSet" disabled>
                 <br><input type = "button" value="9. Object.keys, values, entries" disabled>
                 <br><input type = "button" value="10. Деструктурирующее присваивание" disabled>
@@ -127,29 +117,13 @@
                 <br><input type = "button" value="12. Формат JSON, метод toJSON" disabled>
             </td>
         </tr>
-        <!-- <tr align = center>
-            <td colspan="4">
-                <form name="task">
-                <p>Введите номер практического задания:</p>
-                <input type = "text" style= "height: 15px; width: 15px; text-align: center;" max="3" maxlength="1" name="first" value =""> /
-                <input type = "text" style= "height: 15px; width: 25px; text-align: center;" max="20" maxlength="2" name="second" value =""> /
-                <input type = "text" style= "height: 15px; width: 15px; text-align: center;" max="20" maxlength="1" name="third" value =""> <br>
-                <font size = 2>(номер раздела / номер урока / номер упражнения в уроке)</font> <br>
-                <input type="button" style="height:25px; width:105px; text-align:center" value="Запустить" onclick="start(first.value,second.value,third.value)">
-                </form>
-            </td>
-        </tr> -->
+
     </table>
-    <!-- <marquee behavior="alternate" direction="right">
+    <!--<marquee behavior="scroll" direction="right" height="150">
         <picture>
-            <source srcset="scripts/pics/nya.gif" media="size: 5%">
-            <img src="scripts/pics/nya.gif" alt="nya">
-           </picture>
-    </marquee> -->
-
-
-
-
-
+            <source srcset="scripts/pics/nya.gif">
+            <img src="scripts/pics/nya.gif" alt="nya" width="70px">
+        </picture>
+    </marquee>-->
 </body>
-    </html>
+</html>
