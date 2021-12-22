@@ -1,0 +1,31 @@
+input {
+    height:25px;
+    width:200px; 
+    text-align:left;
+}
+
+input:hover {
+    background-color: seagreen;
+}
+
+:disabled {
+    background-color: whitesmoke;
+}
+
+:focus {
+    background-color:seagreen;
+}
+
+table, tr, td {
+    background-color: whitesmoke;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+a {
+    color: black;
+}
+a:hover {
+    color: seagreen;
+}
+
