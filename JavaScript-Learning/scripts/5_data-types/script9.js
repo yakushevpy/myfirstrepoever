@@ -42,8 +42,8 @@ function sumSalaries(salaries) {
 
 function count(obj) {
     let count = 0;
-    for (let salary of Object.values(obj)) {
+    for (let salary of Object.keys(obj)) {
         count += 1;
     };
     return count;
-}
+};
