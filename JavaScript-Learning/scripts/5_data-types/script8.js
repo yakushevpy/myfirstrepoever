@@ -11,17 +11,14 @@ function confirming(n) {
     if(answer === true) {
         switch(n) {
             case 1:
-                
+                alert('Я бы сделал новый WeakSet \nlet isAlreadyReadedSet = new WeakSet()\nи после прочтения добавлял бы в него messageId\nisAlreadyReadedSet.add({messageId})\nНо тут нет messageId, поэтому придется добавлять объект смс\nisAlreadyReadedSet.add(messages[0])') 
                 confirming(2);
                 break;
             case 2: 
-                
-                
+                alert('В данном кейсе уже помимо самого сообщения придется временно хранить и время прочтения. Соответственно берем WeakMap messageReadedDate.add(message[0], {date}')                
                 break;
         };
     } else {
         return false;
     };
 };
-
-
