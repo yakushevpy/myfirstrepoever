@@ -11,7 +11,7 @@ function confirming(n) {
     if(answer === true) {
         switch(n) {
             case 1:
-                alert('Я бы сделал новый WeakSet \nlet isAlreadyReadedSet = new WeakSet()\nи после прочтения добавлял бы в него messageId\nisAlreadyReadedSet.add({messageId})\nНо тут нет messageId, поэтому придется добавлять объект смс\nisAlreadyReadedSet.add(messages[0])') 
+                alert('Я бы сделал новый Set \nlet isAlreadyReadedSet = new Set()\nи после прочтения добавлял бы в него messageId\nisAlreadyReadedSet.add({messageId})\nНо тут нет messageId, и условие требует удаления инфы, когда к ней нет доступа. Поэтому придется добавлять объект смс\nisAlreadyReadedWeakSet.add(messages[0]) в WeakSet') 
                 confirming(2);
                 break;
             case 2: 
