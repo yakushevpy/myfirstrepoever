@@ -15,7 +15,7 @@ function confirming(n) {
                 confirming(2);
                 break;
             case 2: 
-                alert('В данном кейсе уже помимо самого сообщения придется временно хранить и время прочтения. Соответственно берем WeakMap messageReadedDate.add(message[0], {date}')                
+                alert('В данном кейсе уже помимо самого сообщения придется временно хранить и время прочтения. Соответственно берем WeakMap messageReadedDate.add(message[0], {date})')                
                 break;
         };
     } else {
