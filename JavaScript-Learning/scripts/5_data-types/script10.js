@@ -3,10 +3,10 @@ function task5_10(){
         1: 'Деструктурирующее присваивание',
         2: 'Максимальная зарплата',
     };
-    confirming(1);
+    confirming5_10(1);
 };
 
-function confirming(n) {
+function confirming5_10(n) {
     let answer = confirm(`Задание № ${n}\n${taskdesc[n]}\n`)
     if(answer === true) {
         switch(n) {
@@ -17,7 +17,7 @@ function confirming(n) {
                 };
                 let {name, years:age, isAdmin=false} = user;
                 alert(`name - ${name}\nage - ${age}\nisAdmin - ${isAdmin}`);
-                confirming(2);
+                confirming5_10(2);
                 break;
             case 2: 
                 let salaries = {

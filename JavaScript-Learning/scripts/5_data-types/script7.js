@@ -4,22 +4,22 @@ function task5_7(){
         2: 'Отфильтруйте анаграммы',
         3: 'Перебираемые ключи',
     };
-    confirming(1);
+    confirming5_7(1);
 };
 
-function confirming(n) {
+function confirming5_7(n) {
     let answer = confirm(`Задание № ${n}\n${taskdesc[n]}\n`)
     if(answer === true) {
         switch(n) {
             case 1:
                 let values = ["Hare", "Krishna", "Hare", "Krishna", "Krishna", "Krishna", "Hare", "Hare", ":-O"];
                 alert(unique(values));
-                confirming(2);
+                confirming5_7(2);
                 break;
             case 2: 
                 let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
                 alert( aclean(arr) );
-                confirming(3);
+                confirming5_7(3);
                 break;
             case 3:
                 let map = new Map();

@@ -5,10 +5,10 @@ function task5_3(){
         3: 'Усечение строки',
         4: 'Выделить число',
     };
-    confirming(1);
+    confirming5_3(1);
 };
 
-function confirming(n) {
+function confirming5_3(n) {
     let answer = confirm(`Задание № ${n}\n${taskdesc[n]}\n`)
     if(answer === true) {
         switch(n) {
@@ -19,7 +19,7 @@ function confirming(n) {
                     tryes1 = tryes1 + '\n' + i + '. \"' + string1 + '\" - ' + ucFirst(string1)
                 }; 
                 alert ( `Результаты:\n` + tryes1 )
-                confirming(2);
+                confirming5_3(2);
                 break;
             case 2: 
                 let tryes2 = ''
@@ -28,7 +28,7 @@ function confirming(n) {
                     tryes2 = tryes2 + '\n' + i + '. \"' + string2 + '\" - ' + checkSpam(string2)
                 };
                 alert ( `Результаты:\n` + tryes2 )
-                confirming(3);
+                confirming5_3(3);
                 break;
             case 3: 
                 let tryes3 = ''
@@ -37,7 +37,7 @@ function confirming(n) {
                     tryes3 = tryes3 + '\n' + i + '. ' + trancate(string3, 20)
                 };
                 alert ( `Результаты:\n` + tryes3 )
-                confirming(4);
+                confirming5_3(4);
                 break;
             case 4: ;
                 amount = prompt('Введите стоимость в виде "$111"', '$12345')

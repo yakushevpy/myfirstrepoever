@@ -6,16 +6,16 @@ function task5_4(){
         4: 'Сумма введённых чисел',
         5: 'Подмассив наибольшей суммы',
     };
-    confirming(1);
+    confirming5_4(1);
 };
 
-function confirming(n) {
+function confirming5_4(n) {
     let answer = confirm(`Задание № ${n}\n${taskdesc[n]}\n`)
     if(answer === true) {
         switch(n) {
             case 1:
                 alert('Ответ:\nfruits.length = 4')
-                confirming(2);
+                confirming5_4(2);
                 break;
             case 2: 
                 let styles = ['Джаз', 'Блюз',];
@@ -29,15 +29,15 @@ function confirming(n) {
                 alert('step 4: '+ styles.shift())
                 styles.unshift('Рэп', 'Регги')
                 alert('step 5: '+ styles)
-                confirming(3);
+                confirming5_4(3);
                 break;
             case 3:
                 alert('Ответ:\na,b,function')
-                confirming(4);
+                confirming5_4(4);
                 break;
             case 4: 
                 sumInput();
-                confirming(5);
+                confirming5_4(5);
                 break;
             case 5:
                 alert( getMaxSubSum([-1, 2, 3, -9]) ); 

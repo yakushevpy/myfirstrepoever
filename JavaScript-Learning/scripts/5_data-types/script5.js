@@ -13,40 +13,40 @@ function task5_5(){
         11: 'Получить средний возраст',
         12: 'Оставить уникальные элементы массива',
     };
-    confirming(1);
+    confirming5_5(1);
 };
 
-function confirming(n) {
+function confirming5_5(n) {
     let answer = confirm(`Задание № ${n}\n${taskdesc[n]}\n`)
     if(answer === true) {
         switch(n) {
             case 1:
                 let text = prompt('Введите строку', 'background-color');
                 camelize(text);
-                confirming(2);
+                confirming5_5(2);
                 break;
             case 2: 
                 let array = [5, 3, 8, 1];
                 filterRange(array, 1, 4) // (array, minValue, maxValue)
-                confirming(3);
+                confirming5_5(3);
                 break;
             case 3:
                 let array2 = [5, 3, 8, 1];
                 array2 = filterRangeInPlace(array2, 1, 4);
                 alert(array2);
-                confirming(4);
+                confirming5_5(4);
                 break;
             case 4: 
                 let array3 = [5, 2, 1, -10, 8];
                 array3.sort(sortByDowngrade);
                 alert(array3);
-                confirming(5);
+                confirming5_5(5);
                 break;
             case 5:
                 let array4 = ["HTML", "JavaScript", "CSS"];
                 let sorted = copySorted(array4);
                 alert(`Изначальный - ${array4}\nКопия - ${sorted}`);
-                confirming(6);
+                confirming5_5(6);
                 break;
             case 6:
                 let calc = new Calculator;
@@ -65,7 +65,7 @@ function confirming(n) {
                     let strin = prompt(`Попытка ${i+1} из 3:\nВведите запрос в формате "a ** b"`, `5 ** 3`);
                     alert(powerCalc.calculate(strin));
                 };
-                confirming(7);
+                confirming5_5(7);
                 break;
             case 7:
                 let vasya = { name: "Вася", age: 25 };
@@ -74,7 +74,7 @@ function confirming(n) {
                 let users = [ vasya, petya, masha ];
                 let names = users.map(item => item.name);
                 alert(names);
-                confirming(8);
+                confirming5_5(8);
                 break;
             case 8:
                 let vasya1 = { name: "Вася", surname: "Пупкин", id: 1 };
@@ -83,7 +83,7 @@ function confirming(n) {
                 let users1 = [ vasya1, petya1, masha1 ];
                 let usersMapped = users1.map(user => ({fullname: `${user.name} ${user.surname}`, id: user.id}))
                 alert(`usersMapped[0].id = ${usersMapped[0].id}\nusersMapped[0].fullname = ${usersMapped[0].fullname}`);
-                confirming(9);
+                confirming5_5(9);
                 break;
             case 9:
                 let vasya2 = { name: "Вася", age: 25 };
@@ -92,7 +92,7 @@ function confirming(n) {
                 let arr2 = [ vasya2, petya2, masha2 ];
                 arr2.sort(sortByAge);
                 alert(`1 - ${arr2[0].name} (${arr2[0].age})\n2 - ${arr2[1].name} (${arr2[1].age})\n3 - ${arr2[2].name} (${arr2[2].age})`);
-                confirming(10);
+                confirming5_5(10);
                 break;
             case 10:
                 let arr3 = [1, 2, 3];
@@ -100,7 +100,7 @@ function confirming(n) {
                 alert(arr3);
                 shuffle(arr3);
                 alert(arr3);
-                confirming(11);
+                confirming5_5(11);
                 break;
             case 11:
                 let vasya3 = { name: "Вася", age: 25 };
@@ -108,7 +108,7 @@ function confirming(n) {
                 let masha3 = { name: "Маша", age: 29 };
                 let arr4 = [vasya3, petya3, masha3];
                 alert(getAverageAge(arr4));
-                confirming(12);
+                confirming5_5(12);
                 break;
             case 12:
                 let strings = ["кришна", "кришна", "харе", "харе", "харе", "харе", "кришна", "кришна", ":-O"];
