@@ -17,7 +17,7 @@ function inputTaskNumber5_11(tasklen) {
     let taskAnswer = prompt('Введите номер задания по порядку:', 1);
     console.log(taskAnswer)
     if (numbChecking(taskAnswer, tasklen)) {
-        confirming5_11(taskAnswer);
+        confirming5_11(+taskAnswer);
     } else {
         alert(`Введите число от 1 до ${tasklen}`);
     };

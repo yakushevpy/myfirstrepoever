@@ -3,7 +3,18 @@ function task5_10(){
         1: 'Деструктурирующее присваивание',
         2: 'Максимальная зарплата',
     };
-    confirming5_10(1);
+    let tasklen = (Object.keys(taskdesc).length)
+    inputTaskNumber5_10(tasklen);
+};
+
+function inputTaskNumber5_10(tasklen) {
+    let taskAnswer = prompt('Введите номер задания по порядку:', 1);
+    console.log(taskAnswer)
+    if (numbChecking(taskAnswer, tasklen)) {
+        confirming5_10(+taskAnswer);
+    } else {
+        alert(`Введите число от 1 до ${tasklen}`);
+    };
 };
 
 function confirming5_10(n) {
@@ -17,7 +28,6 @@ function confirming5_10(n) {
                 };
                 let {name, years:age, isAdmin=false} = user;
                 alert(`name - ${name}\nage - ${age}\nisAdmin - ${isAdmin}`);
-                confirming5_10(2);
                 break;
             case 2: 
                 let salaries = {
