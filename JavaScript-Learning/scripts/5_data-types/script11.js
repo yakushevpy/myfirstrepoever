@@ -9,7 +9,18 @@ function task5_11(){
         7: 'Сколько секунд осталось до завтра?',
         8: 'Форматирование относительной даты',
     };
-    confirming5_11(1);
+    let tasklen = (Object.keys(taskdesc).length)
+    inputTaskNumber5_11(tasklen);
+};
+
+function inputTaskNumber5_11(tasklen) {
+    let taskAnswer = prompt('Введите номер задания по порядку:', 1);
+    console.log(taskAnswer)
+    if (numbChecking(taskAnswer, tasklen)) {
+        confirming5_11(taskAnswer);
+    } else {
+        alert(`Введите число от 1 до ${tasklen}`);
+    };
 };
 
 function confirming5_11(n) {
@@ -19,36 +30,29 @@ function confirming5_11(n) {
             case 1:
                 let date = new Date(2012,1,20,3,12)
                 alert(date);
-                confirming5_11(2);
                 break;
             case 2: 
                 let date1 = new Date(2012, 0, 3);
                 alert(getWeekDay(date1));
-                confirming5_11(3);
                 break;
             case 3:
                 let date2 = new Date(2021, 11, 19);
                 alert(`ВС - ${getLocalDay(date2)} (19.12.2021)`);
-                confirming5_11(4);
                 break;
             case 4:
                 let date3 = new Date(2015, 0, 2);
                 alert( getDateAgo(date3, 1) ); // 1, (1 Jan 2015)
                 alert( getDateAgo(date3, 2) ); // 31, (31 Dec 2014)
                 alert( getDateAgo(date3, 365) ); // 2, (2 Jan 2014)
-                confirming5_11(5);
                 break;
             case 5:
 
-                confirming5_11(6);
                 break;
             case 6:
 
-                confirming5_11(7);
                 break;
             case 7:
 
-                confirming5_11(8);
                 break;
             case 8:
 
@@ -77,4 +81,4 @@ function getDateAgo(date, minus) {
     let newDateAgo = new Date(date);
     newDateAgo.setDate(date.getDate() - minus);
     return newDateAgo.getDate();
-}
+};
