@@ -3,7 +3,17 @@ function task5_9(){
         1: 'Сумма свойств объекта',
         2: 'Подсчёт количества свойств объекта',
     };
-    confirming5_9(1);
+    let tasklen = (Object.keys(taskdesc).length)
+    inputTaskNumber5_9(tasklen);
+};
+
+function inputTaskNumber5_9(tasklen) {
+    let taskAnswer = prompt('Введите номер задания по порядку:', 1);
+    if (numbChecking(taskAnswer, tasklen)) {
+        confirming5_9(+taskAnswer);
+    } else {
+        alert(`Введите число от 1 до ${tasklen}`);
+    };
 };
 
 function confirming5_9(n) {
@@ -17,7 +27,6 @@ function confirming5_9(n) {
                     "Mary": 250
                 };
                 alert(sumSalaries(salaries));
-                confirming5_9(2);
                 break;
             case 2: 
                 let user7 = {

@@ -15,7 +15,6 @@ function task5_11(){
 
 function inputTaskNumber5_11(tasklen) {
     let taskAnswer = prompt('Введите номер задания по порядку:', 1);
-    console.log(taskAnswer)
     if (numbChecking(taskAnswer, tasklen)) {
         confirming5_11(+taskAnswer);
     } else {
@@ -46,16 +45,19 @@ function confirming5_11(n) {
                 alert( getDateAgo(date3, 365) ); // 2, (2 Jan 2014)
                 break;
             case 5:
-
+                alert(getLastDayOfTheMonth(+prompt('Введите год:', 2012),+prompt('Введите месяц: (0-январь, 1-февраль...)',1)))
                 break;
             case 6:
-
+                alert(`Сегодня прошло секунд - ${getSecondsToday()}\nЧто равно: \n${Math.round(getSecondsToday()/60/60)} ч. / ${Math.round(getSecondsToday()/60)} мин. / ${getSecondsToday()} сек.\n(коряво округлено до целых)`);
                 break;
             case 7:
-
+                alert(`До завтра осталось секунд - ${getSecondsToTomorrow()}\nЧто равно: \n${Math.round(getSecondsToTomorrow()/60/60)} ч. / ${Math.round(getSecondsToTomorrow()/60)} мин. / ${getSecondsToTomorrow()} сек.\n(коряво округлено до целых)`);
                 break;
             case 8:
-
+                alert( formatDate(new Date(new Date - 1)) ); // "прямо сейчас"
+                alert( formatDate(new Date(new Date - 30 * 1000)) ); // "30 сек. назад"
+                alert( formatDate(new Date(new Date - 5 * 60 * 1000)) ); // "5 мин. назад"
+                alert( formatDate(new Date(new Date - 86400 * 1000)) );
                 break;
         };
     } else {
@@ -81,4 +83,40 @@ function getDateAgo(date, minus) {
     let newDateAgo = new Date(date);
     newDateAgo.setDate(date.getDate() - minus);
     return newDateAgo.getDate();
+};
+
+function getLastDayOfTheMonth(year, month) {
+    let date = new Date();
+    date.setFullYear(year)
+    date.setMonth(month+1);
+    date.setDate(0);
+    return date.getDate();
+};
+
+function getSecondsToday() {
+    let dateNow = new Date();
+    let dateToday = new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate());
+    let dateDiff = Math.round((dateNow - dateToday) / 1000);
+    return dateDiff;
+};
+
+function getSecondsToTomorrow() {
+    let dateNow = new Date();
+    let dateTomorrow = new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate() + 1);
+    let dateDiff = Math.round((dateTomorrow - dateNow) / 1000);
+    return dateDiff;
+};
+
+function formatDate(date) {
+    let dateNow = new Date();
+    let dateDiff = Math.round((dateNow - date) / 1000);
+    if(dateDiff < 1) {
+        return 'прямо сейчас';
+    } else if(dateDiff < 60) {
+        return `${dateDiff} сек. назад`;
+    } else if(dateDiff < (60*60)) {
+        return `${Math.round(dateDiff / 60)} мин. назад`;
+    } else {
+        return `${date.getDate()}.${date.getMonth()}.${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`;
+    };
 };

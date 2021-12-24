@@ -4,7 +4,17 @@ function task5_7(){
         2: 'Отфильтруйте анаграммы',
         3: 'Перебираемые ключи',
     };
-    confirming5_7(1);
+    let tasklen = (Object.keys(taskdesc).length)
+    inputTaskNumber5_7(tasklen);
+};
+
+function inputTaskNumber5_7(tasklen) {
+    let taskAnswer = prompt('Введите номер задания по порядку:', 1);
+    if (numbChecking(taskAnswer, tasklen)) {
+        confirming5_7(+taskAnswer);
+    } else {
+        alert(`Введите число от 1 до ${tasklen}`);
+    };
 };
 
 function confirming5_7(n) {
@@ -14,12 +24,10 @@ function confirming5_7(n) {
             case 1:
                 let values = ["Hare", "Krishna", "Hare", "Krishna", "Krishna", "Krishna", "Hare", "Hare", ":-O"];
                 alert(unique(values));
-                confirming5_7(2);
                 break;
             case 2: 
                 let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
-                alert( aclean(arr) );
-                confirming5_7(3);
+                alert(aclean(arr));
                 break;
             case 3:
                 let map = new Map();

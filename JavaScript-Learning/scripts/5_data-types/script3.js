@@ -5,7 +5,17 @@ function task5_3(){
         3: 'Усечение строки',
         4: 'Выделить число',
     };
-    confirming5_3(1);
+    let tasklen = (Object.keys(taskdesc).length)
+    inputTaskNumber5_3(tasklen);
+};
+
+function inputTaskNumber5_3(tasklen) {
+    let taskAnswer = prompt('Введите номер задания по порядку:', 1);
+    if (numbChecking(taskAnswer, tasklen)) {
+        confirming5_3(+taskAnswer);
+    } else {
+        alert(`Введите число от 1 до ${tasklen}`);
+    };
 };
 
 function confirming5_3(n) {
@@ -19,7 +29,6 @@ function confirming5_3(n) {
                     tryes1 = tryes1 + '\n' + i + '. \"' + string1 + '\" - ' + ucFirst(string1)
                 }; 
                 alert ( `Результаты:\n` + tryes1 )
-                confirming5_3(2);
                 break;
             case 2: 
                 let tryes2 = ''
@@ -28,7 +37,6 @@ function confirming5_3(n) {
                     tryes2 = tryes2 + '\n' + i + '. \"' + string2 + '\" - ' + checkSpam(string2)
                 };
                 alert ( `Результаты:\n` + tryes2 )
-                confirming5_3(3);
                 break;
             case 3: 
                 let tryes3 = ''
@@ -37,7 +45,6 @@ function confirming5_3(n) {
                     tryes3 = tryes3 + '\n' + i + '. ' + trancate(string3, 20)
                 };
                 alert ( `Результаты:\n` + tryes3 )
-                confirming5_3(4);
                 break;
             case 4: ;
                 amount = prompt('Введите стоимость в виде "$111"', '$12345')

@@ -9,7 +9,6 @@ function task5_10(){
 
 function inputTaskNumber5_10(tasklen) {
     let taskAnswer = prompt('Введите номер задания по порядку:', 1);
-    console.log(taskAnswer)
     if (numbChecking(taskAnswer, tasklen)) {
         confirming5_10(+taskAnswer);
     } else {
