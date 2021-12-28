@@ -1,9 +1,6 @@
 body { 
-    background-image: url(scripts/pics/wall.jpg); /* Путь к фоновому рисунку */
-    background-size: 100%;
-   
-    /*background-position: ; /* Положение фона */
-    /*background-repeat: ; /* Повторяем фон по горизонтали */ 
+    background-image: url(scripts/pics/wall.jpg);
+    background-size: 100%;   
    }
 input {
     height:25px;
@@ -27,9 +24,9 @@ input:disabled:hover {
     background-color:seagreen;
 }
 
-table, tr, td {
+tr, td {
     background-color: whitesmoke;
-    border: 2px solid black;
+    border: 1px solid black;
     border-collapse: collapse;
 }
 
@@ -39,4 +36,11 @@ a {
 a:hover {
     color: seagreen;
 }
-
+table {
+    border: 1px solid black;
+    min-width: 700px;
+    width: 70%;
+    display: block;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
