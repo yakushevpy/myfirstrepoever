@@ -1,3 +1,10 @@
+body { 
+    background-image: url(scripts/pics/wall.jpg); /* Путь к фоновому рисунку */
+    background-size: 100%;
+   
+    /*background-position: ; /* Положение фона */
+    /*background-repeat: ; /* Повторяем фон по горизонтали */ 
+   }
 input {
     height:25px;
     width:200px; 
