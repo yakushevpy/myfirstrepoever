@@ -75,7 +75,7 @@ describe('Post requests', function() {
 			,'/yoda'
 			,'text=Dr.Mundo has lost a planet.'
 			);
-		console.log(result)
+		//console.log(result)
 		expect(result).to.have.status(200);
 	})
 })
