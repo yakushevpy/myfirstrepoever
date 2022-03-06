@@ -62,8 +62,20 @@ describe('Rick and Morty API', function() {
 });
 
 describe('Requests from fnc', function() {
-	it('should return 200', async function(){
+	it('should return 200', async function() {
 		let result = await app.getRequest('https://rickandmortyapi.com/api/character','/2');
 		expect(result).to.have.status(200);
 	})
 });
+
+describe('Post requests', function() {
+	it('Should return 200', async function() {
+		this.timeout(10000);
+		let result = await app.postRequest('https://api.funtranslations.com/translate'
+			,'/yoda'
+			,'text=Dr.Mundo has lost a planet.'
+			);
+		console.log(result)
+		expect(result).to.have.status(200);
+	})
+})

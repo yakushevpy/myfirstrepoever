@@ -14,13 +14,11 @@ module.exports = {
   			.get(value)
 	},
 	postRequest: function(url,value,body){
-		return chai.request(app)
-  			.post('/user/me')
+		return chai.request(url)
+  			.post(value)
 			.type('form')
-			.send({
-    			'_method': 'put',
-    			'password': '123',
-    			'confirmPassword': '123'
-  			})
+			.set('X-Funtranslations-Api-Secret', '123456789')
+			//.set('content-type', 'application/json')
+			.send(body)
 	},
 };
