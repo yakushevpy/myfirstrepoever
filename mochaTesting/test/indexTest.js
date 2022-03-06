@@ -3,7 +3,6 @@ const app = require('../index');
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const expect = require('chai').expect;
-const newFunctions = require('../functions');
 
 chai.use(chaiHttp);
 
@@ -32,7 +31,7 @@ describe('Index', function(){
 	});
 });
 describe('Rick and Morty API', function() {
-	describe('getCharacter should return character', function(){
+	describe('API should return character', function(){
 		it('should return 200', function(done){
 		chai.request('https://rickandmortyapi.com/api/character')
   			.get('/2')
@@ -42,7 +41,7 @@ describe('Rick and Morty API', function() {
   			});
   		});
 
-  		it('should return "Morty Smith"', function(done){
+  		it('Should return "Morty Smith" (2)', function(done){
 		chai.request('https://rickandmortyapi.com/api/character')
   			.get('/2')
   			.end (function(err,res) {
@@ -51,7 +50,7 @@ describe('Rick and Morty API', function() {
   			});
   		});
 
-  		it('should return NOT "Morty Smith"', function(done){
+  		it('Should return NOT "Morty Smith" (3)', function(done){
 		chai.request('https://rickandmortyapi.com/api/character')
   			.get('/3')
   			.end (function(err,res) {
@@ -64,7 +63,7 @@ describe('Rick and Morty API', function() {
 
 describe('Requests from fnc', function() {
 	it('should return 200', async function(){
-		let result = await newFunctions.getRequest('https://rickandmortyapi.com/api/character','/2');
+		let result = await app.getRequest('https://rickandmortyapi.com/api/character','/2');
 		expect(result).to.have.status(200);
 	})
 });

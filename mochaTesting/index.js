@@ -1,3 +1,6 @@
+const chaiHttp= require('chai-http');
+const chai = require('chai');
+const expect = require('chai').expect;
 
 module.exports = {
 	sayHello: function() {
@@ -6,9 +9,18 @@ module.exports = {
 	addNumbers: function(value1,value2) {
 		return value1 + value2;
 	},
-	getCharacter: function(number) {
-		let url = 'https://rickandmortyapi.com/api/character/'+ +number;
+	getRequest: function(url,value){
+		return chai.request(url)
+  			.get(value)
+	},
+	postRequest: function(url,value,body){
 		return chai.request(app)
-  			.get(url);
-    },
+  			.post('/user/me')
+			.type('form')
+			.send({
+    			'_method': 'put',
+    			'password': '123',
+    			'confirmPassword': '123'
+  			})
+	},
 };
