@@ -11,6 +11,7 @@ function task5_11(){
     };
     let tasklen = (Object.keys(taskdesc).length);
     let taskFunctions = new TaskFunctions();
+    taskFunctions.getTaskDesc(tasklen,taskdesc);
     let taskNumber = taskFunctions.setNumber(tasklen);
     if (taskNumber) {
         let answer = taskFunctions.confirming(taskNumber, taskdesc)

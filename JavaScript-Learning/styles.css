@@ -1,22 +1,23 @@
 body { 
-    background-image: url(scripts/pics/wall.jpg); /* Путь к фоновому рисунку */
-    background-size: 100%;
-   
-    /*background-position: ; /* Положение фона */
-    /*background-repeat: ; /* Повторяем фон по горизонтали */ 
-   }
+    background-image: url(scripts/pics/wall.jpg); 
+}
+
 input {
     height:25px;
-    width:200px; 
+    padding: 0px;
+    width:180px; 
     text-align:left;
+    font-size: 13px;
 }
 
 input:hover {
     background-color: seagreen;
+    font-size: 13px;
 }
 
 input:disabled:hover {
     background-color: grey;
+    font-size: 13px;
 }
 
 :disabled {
@@ -27,10 +28,37 @@ input:disabled:hover {
     background-color:seagreen;
 }
 
-table, tr, td {
+tr, td {
     background-color: whitesmoke;
     border: 2px solid black;
     border-collapse: collapse;
+}
+
+table.topTable {
+    display: revert;
+    width: 80%;
+    min-width: 1000px;
+    text-align: center;
+    height: auto;
+    white-space: nowrap;
+    padding-block: 15px;
+}
+tbody {
+    align-content: center;
+}
+table.contentTable {
+    display:block;
+    overflow-y: hidden;
+    overflow-x: auto;
+    width: 80%;
+    min-width: 1000px;
+    height: auto;
+    white-space: nowrap;
+    border-block-width: 2px;
+    padding-block: 0px;
+    margin-block: 0px;
+    border-spacing: 1px;
+    border-width: 0px;
 }
 
 a {
@@ -39,4 +67,3 @@ a {
 a:hover {
     color: seagreen;
 }
-
