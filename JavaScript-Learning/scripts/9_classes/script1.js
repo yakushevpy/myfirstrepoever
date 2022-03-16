@@ -1,26 +1,19 @@
-
 function task9_1(){
     taskdesc = {
         1: 'Перепишите класс',
     };
 
-    let tasklen = (Object.keys(taskdesc).length)
-    inputTaskNumber9_1(tasklen);
-};
-
-function inputTaskNumber9_1(tasklen) {
-    let taskAnswer = prompt('Введите номер задания по порядку:', 1);
-    if (numbChecking(taskAnswer, tasklen)) {
-        confirming9_1(+taskAnswer);
-    } else {
-        alert(`Введите число от 1 до ${tasklen}`);
+    let tasklen = (Object.keys(taskdesc).length);
+    let taskFunctions = new TaskFunctions();
+    let taskNumber = taskFunctions.setNumber(tasklen);
+    if (taskNumber) {
+        let answer = taskFunctions.confirming(taskNumber, taskdesc)
+        if (answer) taskRunning9_1(taskNumber);
     };
 };
 
-function confirming9_1(n) {
-    let answer = confirm(`Задание № ${n}\n${taskdesc[n]}\n`)
-    if(answer === true) {
-        switch(n) {
+function taskRunning9_1(taskNumber) {
+        switch(taskNumber) {
             case 1:
                 class Clock {
         
@@ -61,8 +54,5 @@ function confirming9_1(n) {
                 let asking = alert('Часики тикают в консоли')
                 clock.start();
                 break;
-        };
-    } else {
-        return false;
-    };
+        };    
 };

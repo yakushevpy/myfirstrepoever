@@ -6,15 +6,15 @@ function numbChecking(numb,len) {
     };
 }
 
-class TaskStarting {
+class TaskFunctions {
 
     setNumber(tasklen){
-        let taskAnswer = +prompt('Введите номер задания по порядку:', 1);
+        let taskAnswer = +prompt(`Введите номер задания (Всего: ${tasklen})`, 1);
         if (taskAnswer) {
             if (this.numbChecking(taskAnswer, tasklen)) {
                 return taskAnswer;
             } else {
-                alert(`Введите число от 1 до ${tasklen}`)
+                alert(`Введенного номера задания не существует`)
             };
         };
     }
@@ -25,8 +25,10 @@ class TaskStarting {
             return false;
         };     
     }
+    confirming(taskNumber, taskDesc) {
+        return  confirm(`Задание № ${taskNumber}\n${taskDesc[taskNumber]}\n`)
+    }
 }
 
 
 
-//export default function() {}

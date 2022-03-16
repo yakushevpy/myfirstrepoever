@@ -3,13 +3,21 @@ function task5_1(){
         1: 'Можно ли добавить свойство строке?',
     };
 
-    confirm(`Задание:\n${taskdesc[1]}\n`);
-    task5_1_1();
+    let tasklen = (Object.keys(taskdesc).length);
+    let taskFunctions = new TaskFunctions();
+    let taskNumber = taskFunctions.setNumber(tasklen);
+    if (taskNumber) {
+        let answer = taskFunctions.confirming(taskNumber, taskdesc)
+        if (answer) taskRunning5_1(taskNumber);
+    };
 };
 
-function task5_1_1() {
-    alert('Даже если свойство создастся, оно не сохранится. Т.к. строка не содержит в себе свойств')
-    
+function taskRunning5_1(taskNumber) {  
+    switch(taskNumber) {
+        case 1: 
+            alert('Даже если свойство создастся, оно не сохранится. Т.к. строка не содержит в себе свойств');
+        break;
+    }   
 };
 
 

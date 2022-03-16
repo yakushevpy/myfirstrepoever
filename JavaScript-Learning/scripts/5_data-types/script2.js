@@ -8,58 +8,53 @@ function task5_2(){
         6: 'Случайное целое число от min до max',
     };
 
-    confirm( `Задание:\n${taskdesc[1]}\n` );
-    task5_2_1();
-};
-
-function task5_2_1() {
-    x = +prompt( '1', 1 )
-    y = +prompt( '2', 2 )
-    alert( x+y )  
-    confirm( `Задание:\n${taskdesc[2]}\n` );
-    task5_2_2();
-};
-
-function task5_2_2() {
-    alert( '6.35 = '+  6.35.toFixed(1) + '\n' + '6.35 = '+ Math.round( 6.35 * 10 ) / 10 ) + `\n 6.35.toFixed(1) \nMath.round( 6.35 * 10 ) / 10`;
-    confirm( `Задание:\n${taskdesc[3]}\n` );
-    task5_2_3();
-};
-
-function task5_2_3() {
-    x = prompt( 'Введите число', 'Хрен тебе' );
-    if (isFinite(x)) {
-        alert( 'GG - '+ x + ' is a number' ) 
-        confirm( `Задание:\n${taskdesc[4]}\n` );
-        task5_2_4();
-    } else {
-        alert( 'Lets try one more time' );
-        task5_2_3();
+    let tasklen = (Object.keys(taskdesc).length);
+    let taskFunctions = new TaskFunctions();
+    let taskNumber = taskFunctions.setNumber(tasklen);
+    if (taskNumber) {
+        let answer = taskFunctions.confirming(taskNumber, taskdesc)
+        if (answer) taskRunning5_2(taskNumber);
     };
 };
 
-function task5_2_4(){
-    let i = 0;
-    let x = 'The answer is: Погрешность';
-    while ( i < 11 ) {
-        i += 0.2;
-        x += '\n' + i
-    };
-    alert( x );
-    confirm( `Задание:\n${taskdesc[5]}\n` );
-    task5_2_5();
+function taskRunning5_2(taskNumber) {
+    switch(taskNumber) {
+        case 1:
+            let firstNumber = +prompt( 'Введите первое число', 1 )
+            let secondNumber = +prompt( 'Введите еще число', 2 )
+            alert(`Сумма чисел ${firstNumber} и ${secondNumber} равна ${firstNumber+secondNumber}`)     
+            break;
+        case 2:
+            alert( '6.35 = '+  6.35.toFixed(1) + '\n' + '6.35 = '+ Math.round( 6.35 * 10 ) / 10 ) + `\n 6.35.toFixed(1) \nMath.round( 6.35 * 10 ) / 10`;
+            break;
+        case 3:
+            x = prompt( 'Введите число', 'Хрен тебе' );
+            if (isFinite(x)) {
+                alert( 'GG - '+ x + ' is a number' ) 
+                break
+                task5_2_4();
+            } else {
+                alert( 'Lets try one more time' );
+                break;
+            };
+        case 4:
+            let i = 0;
+            let x = 'The answer is: Погрешность';
+            while ( i < 11 ) {
+                i += 0.2;
+                x += '\n' + i
+            };
+            alert( x );
+            break;
+        case 5:
+            random(1,5);
+            break;
+        case 6:
+            randomInteger(1,5);
+            break;
+    }
+    
 };
-
-function task5_2_5() {
-    random(1,5);
-    confirm( `Задание:\n${taskdesc[6]}\n` );
-    task5_2_6()
-};
-
-function task5_2_6() {
-    randomInteger(1,5);
-};
-
 
 
 function random( min, max ) {

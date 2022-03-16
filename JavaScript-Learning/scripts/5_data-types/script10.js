@@ -3,23 +3,17 @@ function task5_10(){
         1: 'Деструктурирующее присваивание',
         2: 'Максимальная зарплата',
     };
-    let tasklen = (Object.keys(taskdesc).length)
-    inputTaskNumber5_10(tasklen);
-};
-
-function inputTaskNumber5_10(tasklen) {
-    let taskAnswer = prompt('Введите номер задания по порядку:', 1);
-    if (numbChecking(taskAnswer, tasklen)) {
-        confirming5_10(+taskAnswer);
-    } else {
-        alert(`Введите число от 1 до ${tasklen}`);
+    let tasklen = (Object.keys(taskdesc).length);
+    let taskFunctions = new TaskFunctions();
+    let taskNumber = taskFunctions.setNumber(tasklen);
+    if (taskNumber) {
+        let answer = taskFunctions.confirming(taskNumber, taskdesc)
+        if (answer) taskRunning5_10(taskNumber);
     };
 };
 
-function confirming5_10(n) {
-    let answer = confirm(`Задание № ${n}\n${taskdesc[n]}\n`)
-    if(answer === true) {
-        switch(n) {
+function taskRunning5_10(taskNumber) {
+        switch(taskNumber) {
             case 1:
                 let user = {
                     name: "John",
@@ -37,9 +31,6 @@ function confirming5_10(n) {
                 alert(`Самый богатый в компании - ${topSalary(salaries).valueOwner} (${topSalary(salaries).maxValue} руб./месяц)`);
                 break;
         };
-    } else {
-        return false;
-    };
 };
 
 function topSalary(salaries) {

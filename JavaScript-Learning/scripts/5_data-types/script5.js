@@ -13,23 +13,17 @@ function task5_5(){
         11: 'Получить средний возраст',
         12: 'Оставить уникальные элементы массива',
     };
-    let tasklen = (Object.keys(taskdesc).length)
-    inputTaskNumber5_5(tasklen);
-};
-
-function inputTaskNumber5_5(tasklen) {
-    let taskAnswer = prompt('Введите номер задания по порядку:', 1);
-    if (numbChecking(taskAnswer, tasklen)) {
-        confirming5_5(+taskAnswer);
-    } else {
-        alert(`Введите число от 1 до ${tasklen}`);
+    let tasklen = (Object.keys(taskdesc).length);
+    let taskFunctions = new TaskFunctions();
+    let taskNumber = taskFunctions.setNumber(tasklen);
+    if (taskNumber) {
+        let answer = taskFunctions.confirming(taskNumber, taskdesc)
+        if (answer) taskRunning5_5(taskNumber);
     };
 };
 
-function confirming5_5(n) {
-    let answer = confirm(`Задание № ${n}\n${taskdesc[n]}\n`)
-    if(answer === true) {
-        switch(n) {
+function taskRunning5_5(taskNumber) {
+        switch(taskNumber) {
             case 1:
                 let text = prompt('Введите строку', 'background-color');
                 camelize(text);
@@ -114,9 +108,6 @@ function confirming5_5(n) {
                 alert(unique(strings));
                 break;
         };
-    } else {
-        return false;
-    };
 };
 
 

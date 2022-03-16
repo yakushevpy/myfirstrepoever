@@ -4,23 +4,17 @@ function task5_7(){
         2: 'Отфильтруйте анаграммы',
         3: 'Перебираемые ключи',
     };
-    let tasklen = (Object.keys(taskdesc).length)
-    inputTaskNumber5_7(tasklen);
-};
-
-function inputTaskNumber5_7(tasklen) {
-    let taskAnswer = prompt('Введите номер задания по порядку:', 1);
-    if (numbChecking(taskAnswer, tasklen)) {
-        confirming5_7(+taskAnswer);
-    } else {
-        alert(`Введите число от 1 до ${tasklen}`);
+    let tasklen = (Object.keys(taskdesc).length);
+    let taskFunctions = new TaskFunctions();
+    let taskNumber = taskFunctions.setNumber(tasklen);
+    if (taskNumber) {
+        let answer = taskFunctions.confirming(taskNumber, taskdesc)
+        if (answer) taskRunning5_7(taskNumber);
     };
 };
 
-function confirming5_7(n) {
-    let answer = confirm(`Задание № ${n}\n${taskdesc[n]}\n`)
-    if(answer === true) {
-        switch(n) {
+function taskRunning5_7(taskNumber) {
+    switch(taskNumber) {
             case 1:
                 let values = ["Hare", "Krishna", "Hare", "Krishna", "Krishna", "Krishna", "Hare", "Hare", ":-O"];
                 alert(unique(values));
@@ -39,9 +33,6 @@ function confirming5_7(n) {
                 alert(keys);
                 break;
         };
-    } else {
-        return false;
-    };
 };
 
 function unique(arr) {

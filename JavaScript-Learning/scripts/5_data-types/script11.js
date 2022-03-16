@@ -9,23 +9,17 @@ function task5_11(){
         7: 'Сколько секунд осталось до завтра?',
         8: 'Форматирование относительной даты',
     };
-    let tasklen = (Object.keys(taskdesc).length)
-    inputTaskNumber5_11(tasklen);
-};
-
-function inputTaskNumber5_11(tasklen) {
-    let taskAnswer = prompt('Введите номер задания по порядку:', 1);
-    if (numbChecking(taskAnswer, tasklen)) {
-        confirming5_11(+taskAnswer);
-    } else {
-        alert(`Введите число от 1 до ${tasklen}`);
+    let tasklen = (Object.keys(taskdesc).length);
+    let taskFunctions = new TaskFunctions();
+    let taskNumber = taskFunctions.setNumber(tasklen);
+    if (taskNumber) {
+        let answer = taskFunctions.confirming(taskNumber, taskdesc)
+        if (answer) taskRunning5_11(taskNumber);
     };
 };
 
-function confirming5_11(n) {
-    let answer = confirm(`Задание № ${n}\n${taskdesc[n]}\n`)
-    if(answer === true) {
-        switch(n) {
+function taskRunning5_11(taskNumber) {
+        switch(taskNumber) {
             case 1:
                 let date = new Date(2012,1,20,3,12)
                 alert(date);
@@ -60,9 +54,6 @@ function confirming5_11(n) {
                 alert( formatDate(new Date(new Date - 86400 * 1000)) );
                 break;
         };
-    } else {
-        return false;
-    };
 };
 
 

@@ -5,23 +5,18 @@ function task5_3(){
         3: 'Усечение строки',
         4: 'Выделить число',
     };
-    let tasklen = (Object.keys(taskdesc).length)
-    inputTaskNumber5_3(tasklen);
-};
 
-function inputTaskNumber5_3(tasklen) {
-    let taskAnswer = prompt('Введите номер задания по порядку:', 1);
-    if (numbChecking(taskAnswer, tasklen)) {
-        confirming5_3(+taskAnswer);
-    } else {
-        alert(`Введите число от 1 до ${tasklen}`);
+    let tasklen = (Object.keys(taskdesc).length);
+    let taskFunctions = new TaskFunctions();
+    let taskNumber = taskFunctions.setNumber(tasklen);
+    if (taskNumber) {
+        let answer = taskFunctions.confirming(taskNumber, taskdesc)
+        if (answer) taskRunning5_2(taskNumber);
     };
 };
 
-function confirming5_3(n) {
-    let answer = confirm(`Задание № ${n}\n${taskdesc[n]}\n`)
-    if(answer === true) {
-        switch(n) {
+function taskRunning5_2(taskNumber) {  
+    switch(taskNumber) {
             case 1:
                 let tryes1 = ''
                 for (let i = 1; i < 4; i++) {
@@ -50,9 +45,6 @@ function confirming5_3(n) {
                 amount = prompt('Введите стоимость в виде "$111"', '$12345')
                 alert(extractCurrencyValue(amount));
                 break;
-        };
-    } else {
-        return false;
     };
 };
 

@@ -3,23 +3,17 @@ function task5_12(){
         1: 'Преобразуйте объект в JSON, а затем обратно в обычный объект',
         2: 'Исключить обратные ссылки',
     };
-    let tasklen = (Object.keys(taskdesc).length)
-    inputTaskNumber5_12(tasklen);
-};
-
-function inputTaskNumber5_12(tasklen) {
-    let taskAnswer = prompt('Введите номер задания по порядку:', 1);
-    if (numbChecking(taskAnswer, tasklen)) {
-        confirming5_12(+taskAnswer);
-    } else {
-        alert(`Введите число от 1 до ${tasklen}`);
+    let tasklen = (Object.keys(taskdesc).length);
+    let taskFunctions = new TaskFunctions();
+    let taskNumber = taskFunctions.setNumber(tasklen);
+    if (taskNumber) {
+        let answer = taskFunctions.confirming(taskNumber, taskdesc)
+        if (answer) taskRunning5_12(taskNumber);
     };
 };
 
-function confirming5_12(n) {
-    let answer = confirm(`Задание № ${n}\n${taskdesc[n]}\n`)
-    if(answer === true) {
-        switch(n) {
+function taskRunning5_12(taskNumber) {
+        switch(taskNumber) {
             case 1:
                 let user = {
                     name: "Василий Иванович",
@@ -49,8 +43,5 @@ function confirming5_12(n) {
                 }))
                 break;
         };
-    } else {
-        return false;
-    };
 };
 
