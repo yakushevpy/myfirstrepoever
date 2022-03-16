@@ -1,11 +1,3 @@
-function numbChecking(numb,len) {
-    if (numb <= len && numb > 0) {
-        return numb;
-    } else {
-        return false;
-    };
-}
-
 class TaskFunctions {
 
     setNumber(tasklen){
@@ -23,12 +15,9 @@ class TaskFunctions {
             return taskAnswer;
         } else {
             return false;
-        };     
+        };
     }
     confirming(taskNumber, taskDesc) {
         return  confirm(`Задание № ${taskNumber}\n${taskDesc[taskNumber]}\n`)
     }
 }
-
-
-
