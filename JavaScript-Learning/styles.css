@@ -5,7 +5,9 @@ body {
 input {
     height:25px;
     padding: 0px;
-    width:-webkit-fill-available;
+    max-width: 200px;
+    min-width: 100px;
+    width: -webkit-fill-available;
     text-align:left;
     font-size: 13px;
 }
@@ -48,7 +50,7 @@ tbody {
     align-content: center;
 }
 table.contentTable {
-    display:table;
+    display:block;
     overflow-y: hidden;
     overflow-x: auto;
     width: 80%;
@@ -62,8 +64,8 @@ table.contentTable {
     border-spacing: 1px;
 }
 td.contentTable {
-    max-width: 200px;
-    min-width: 100px;
+    max-width: 300px;
+    
 }
 
 a {
