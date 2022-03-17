@@ -64,8 +64,7 @@ table.contentTable {
     border-spacing: 1px;
 }
 td.contentTable {
-    max-width: 300px;
-    
+    max-width: 300px; 
 }
 
 a {
