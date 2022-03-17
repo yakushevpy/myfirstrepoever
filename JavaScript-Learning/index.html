@@ -42,11 +42,14 @@
     
 </head>
 <body>
-    <table class="topTable" align="center",border=1>
-        <td><h2>JavaScript Learning</h2></td>
+   
+        
+    <table class="topTable" align="center" border=0>
+        <tr><td><h2>JavaScript Learning</h2></td></tr>
     </table>
-    <table class="contentTable" align='center', border=1>
-        <tr align="middle">
+    
+    <table class="contentTable" align='center' border=0>
+        <tr align="middle" class="contentTable">
             <td><h4><a href = 'https://learn.javascript.ru/getting-started' target="_blank">Введение</a></h4></td>
             <td><h4><a href = 'https://learn.javascript.ru/first-steps' target="_blank">Основы JavaScript</a></h4></h4></td>
             <td><h4><a href = 'https://learn.javascript.ru/code-quality' target="_blank">Качество кода</a></h4></td>
@@ -55,14 +58,14 @@
             <td><h4><a href = 'https://learn.javascript.ru/object-properties' target="_blank">Свойства объекта</a></h4></td>
             <td><h4><a href = 'https://learn.javascript.ru/classes' target="_blank">Классы</a></h4></td>
         </tr>
-        <tr>
-            <td valign = top>
+        <tr class="contentTable">
+            <td valign = top class="contentTable">
                 <input type="button" value="1. Введение в JavaScript" disabled>
                 <br><input type="button" value="2. Справочники и спецификации" disabled>
                 <br><input type="button" value="3. Редакторы кода" disabled>
                 <br><input type="button" value="4. Консоль разработчика" disabled>
             </td>
-            <td valign = top>
+            <td valign = top class="contentTable">
                 <input type="button" value="1. Привет, мир!" onclick="task2_1('script1.js')">
                 <br><input type="button" value="2. Структура кода" disabled>
                 <br><input type="button" value="3. Строгий режим" disabled>
@@ -88,7 +91,7 @@
                 <br><input type="button" value="17. Функции-стрелки, основы" onclick="task2_16()">
                 <br><input type="button" value="18. Особенности JavaScript" disabled>
             </td>
-            <td valign = top>
+            <td valign = top class="contentTable">
                 <input type="button" value="1. Отладка в браузере Chrome" disabled>
                 <br><input type="button" value="2. Советы по стилю кода" onclick ="task3_2()">
                 <br><input type="button" value="3. Комментарии" disabled>
@@ -96,7 +99,7 @@
                 <br><input type="button" value="5. Автоматическое тестирование c использованием фреймворка Mocha" onclick="task3_5()">
                 <br><input type="button" value="6. Полифилы" disabled>
             </td>
-            <td valign = top>
+            <td valign = top class="contentTable">
                 <input type = "button" value="1. Объекты" onclick = "task4_1()">
                 <br><input type = "button" value="2. Копирование объектов" disabled>
                 <br><input type = "button" value="3. Сборка мусора" disabled>
@@ -106,7 +109,7 @@
                 <br><input type = "button" value="7. Тип данных Symbol" disabled>
                 <br><input type = "button" value="8. Преобразование объектов в приметивы" disabled>
             </td>
-            <td valign = top>
+            <td valign = top class="contentTable">
                 <input type = "button" value="1. Методы у примитивов" onclick = "task5_1()">
                 <br><input type = "button" value="2. Числа" onclick = "task5_2()">
                 <br><input type = "button" value="3. Строки" onclick = "task5_3()">
@@ -120,11 +123,11 @@
                 <br><input type = "button" value="11. Дата и время" onclick="task5_11()">
                 <br><input type = "button" value="12. Формат JSON, метод toJSON" onclick="task5_12()">
             </td>
-            <td valign = top>
+            <td valign = top class="contentTable">
                 <input type = "button" value="1. Флаги и дескрипторы свойств" disabled>
                 <br><input type = "button" value="2. Свойства - геттеры и сеттеры" disabled>
             </td>
-            <td valign = top>
+            <td valign = top class="contentTable">
                 <input type = "button" value="1. Класс: базовый синтаксис" onclick = "task9_1()">
                 <br><input type = "button" value="2. Наследование классов" onclick = "task9_2()">
                 <br><input type = "button" value="3. Статические свойства и методы" disabled>
