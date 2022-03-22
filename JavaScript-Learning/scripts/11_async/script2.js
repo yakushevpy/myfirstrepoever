@@ -1,5 +1,3 @@
-const { resolve } = require("path");
-
 function task11_2(){
     taskdesc = {
         1: 'Можно ли "перевыполнить" промис?',
