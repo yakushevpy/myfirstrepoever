@@ -39,22 +39,23 @@
     <script src="scripts/9_classes/script2.js"></script> 
     <script src="scripts/9_classes/script3.js"></script> 
     <script src="scripts/9_classes/script6.js"></script>
+    <script src="scripts/10_error-handling/script1.js"></script>    <!-- error handling -->
+    <script src="scripts/10_error-handling/script2.js"></script>
     <script src="scripts/11_async/script2.js"></script>     <!-- async -->
     <script src="scripts/11_async/script3.js"></script>
     <script src="scripts/11_async/script4.js"></script>
     <script src="scripts/11_async/script8.js"></script>
 
-
     <link rel="stylesheet" href="styles.css">   
-    
+
 </head>
 <body>
-   
-        
+
+
     <table class="topTable" align="center" border=0>
         <tr><td><h2>JavaScript Learning</h2></td></tr>
     </table>
-    
+
     <table class="contentTable" align='center' border=0>
         <tr align="middle" class="contentTable">
             <td><h4><a href = 'https://learn.javascript.ru/getting-started' target="_blank">Введение</a></h4></td>
@@ -64,6 +65,7 @@
             <td><h4><a href = 'https://learn.javascript.ru/data-types' target="_blank">Типы данных</a></h4></td>
             <td><h4><a href = 'https://learn.javascript.ru/object-properties' target="_blank">Свойства объекта</a></h4></td>
             <td><h4><a href = 'https://learn.javascript.ru/classes' target="_blank">Классы</a></h4></td>
+            <td><h4><a href = 'https://learn.javascript.ru/error-handling' target="_blank">Обработка ошибок</a></h4></td>
             <td><h4><a href = 'https://learn.javascript.ru/async' target="_blank">Промисы, async/await</a></h4></td>
         </tr>
         <tr class="contentTable">
@@ -144,9 +146,11 @@
                 <br><input type = "button" value='6. Проверка класса: "instanceof"' onclick="task9_6()">
                 <br><input type = "button" value="7. Примеси" disabled>
             </td>
-
             <td valign = top class="contentTable">
-                
+                <input type = "button" value='1. Обработка ошибок, "try..catch"' onclick="task10_1()">
+                <br><input type = "button" value="2. Пользовательские ошибки, расширение Error" onclick="task10_2()">
+            </td>
+            <td valign = top class="contentTable"> 
                 <a href="scripts/11_async/script1.html" target="_blank"><input type = "button" value="1. Введение: колбэки"></a>
                 <br><input type = "button" value="2. Промисы" onclick="task11_2()">
                 <br><input type = "button" value="3. Цепочка промисов" onclick="task11_3()">
