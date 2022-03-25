@@ -73,6 +73,8 @@ function taskRunning11_8(taskNumber) {
                   
                 demoGithubUser();
                 break;
+
+            // Задание 3    
             case 3:
                 async function wait() {
                     await new Promise(resolve => setTimeout(resolve, 2000));
