@@ -41,6 +41,10 @@
     <script src="scripts/9_classes/script6.js"></script>
     <script src="scripts/10_error-handling/script1.js"></script>    <!-- error handling -->
     <script src="scripts/10_error-handling/script2.js"></script>
+    <script src="scripts/11_async/script2.js"></script>     <!-- async -->
+    <script src="scripts/11_async/script3.js"></script>
+    <script src="scripts/11_async/script4.js"></script>
+    <script src="scripts/11_async/script8.js"></script>
 
     <link rel="stylesheet" href="styles.css">   
 
@@ -62,6 +66,7 @@
             <td><h4><a href = 'https://learn.javascript.ru/object-properties' target="_blank">Свойства объекта</a></h4></td>
             <td><h4><a href = 'https://learn.javascript.ru/classes' target="_blank">Классы</a></h4></td>
             <td><h4><a href = 'https://learn.javascript.ru/error-handling' target="_blank">Обработка ошибок</a></h4></td>
+            <td><h4><a href = 'https://learn.javascript.ru/async' target="_blank">Промисы, async/await</a></h4></td>
         </tr>
         <tr class="contentTable">
             <td valign = top class="contentTable">
@@ -144,6 +149,16 @@
             <td valign = top class="contentTable">
                 <input type = "button" value='1. Обработка ошибок, "try..catch"' onclick="task10_1()">
                 <br><input type = "button" value="2. Пользовательские ошибки, расширение Error" onclick="task10_2()">
+            </td>
+            <td valign = top class="contentTable"> 
+                <a href="scripts/11_async/script1.html" target="_blank"><input type = "button" value="1. Введение: колбэки"></a>
+                <br><input type = "button" value="2. Промисы" onclick="task11_2()">
+                <br><input type = "button" value="3. Цепочка промисов" onclick="task11_3()">
+                <br><input type = "button" value="4. Промисы: обработка ошибок" onclick="task11_4()">
+                <br><input type = "button" value="5. Promise API" disabled>
+                <br><input type = "button" value='6. Промисификация' disabled>
+                <br><input type = "button" value="7. Микрозадачи" disabled>
+                <br><input type = "button" value="8. Async/await" onclick="task11_8()">
             </td>
         </tr>
     </table>
