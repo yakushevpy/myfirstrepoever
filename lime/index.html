@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <script src="config.js"></script>
+    </head>
+    <body onload="fillSelectors()">
+
+        <form class="environment_form">
+            <div><b>Окружение</b></div>
+            <div>
+            <select id="project" name="project" required="required"></select>            
+            <select id="environment" name="environment" required="required"></select>
+            </div>
+            <div>
+            <input type="button" value="Сохранить" onclick="setEnvironment(project.value, environment.value)">
+            </div>
+            <div id="log"></div>
+        </form>
+
+    </body>
+</html>
